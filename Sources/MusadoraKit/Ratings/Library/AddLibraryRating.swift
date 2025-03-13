@@ -112,7 +112,7 @@ public extension MLibrary {
   /// - Returns: The added rating for the music item as `Rating` object.
   ///
   /// - Throws: `MRatingError.notFound`: If the music item with the specified ID is not found in the user's library.
-  static func addRating(with id: MusicItemID, item: CatalogRatingMusicItemType, rating: RatingType) async throws -> Rating {
+  static func addRating(with id: MusicItemID, item: LibraryRatingMusicItemType, rating: RatingType) async throws -> Rating {
     let request = MLibraryRatingAddRequest(with: id, item: item, rating: rating)
     let response = try await request.response()
 
